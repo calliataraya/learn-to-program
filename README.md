@@ -12,6 +12,7 @@ I am learning to program Ruby using Chris Pine's [Learn to Program](https://pine
   `cd workspace`
 
 3. add ssh key to github and verify connection
+  * https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
   * https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
   * https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection
 4. clone repo
