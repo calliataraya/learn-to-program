@@ -8,5 +8,7 @@ puts 'What is a third item price at the grocery store?'
 item3 = gets.chomp.to_f
 sub_total = item1 + item2 + item3
 total = sub_total * 1.08
-puts 'sub_total:' + sub_total.to_s
-puts 'total:' + total.to_s
+puts ''
+linewidth = 45
+puts (('sub_total: ' + sub_total.to_s).center(linewidth))
+puts (('total: ' + total.to_s).center(linewidth))
