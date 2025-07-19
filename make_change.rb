@@ -13,7 +13,7 @@ loop do
 end
 
 # defining variables
-total = (sub_total * 1.08).to_f
+total = sub_total * 1.08
 linewidth = 45
 
 # printing total with/out tax so they know how much to pay
@@ -43,4 +43,62 @@ else # no payment
     puts 'uhhhhh you need to pay for those.'
 end 
 
+change = (change * 100).to_i
+
+
+# gives change
+
+quarter_value = 25
+dime_value = 10
+nickel_value = 05
+penny_value = 1
+one_dollar = 100
+five_dollar = 500
+ten_dollar = 1000
+# twenty_dollar = 2000
+# fifty_dollar = 5000
+# hundred_dollar = 10000
+
+change_denominations = {
+    ten_dollar: 0,
+    five_dollar: 0,
+    one_dollar: 0,
+    quarter: 0,
+    dime: 0,
+    nickel: 0,
+    penny: 0,
+}
+
+puts change.to_i
+while change.to_i > 0
+    puts change
+    if ten_dollar <= change
+        change_denominations[:ten_dollar] = change_denominations[:ten_dollar] + 1
+        change = change - 1000
+    elsif five_dollar <= change
+        change_denominations[:five_dollar] = change_denominations[:five_dollar] + 1
+        change = change - 500
+    elsif one_dollar <= change
+        change_denominations[:one_dollar] = change_denominations[:one_dollar] + 1
+        change = change - 100
+    elsif quarter_value <= change
+        change_denominations[:quarter] = change_denominations[:quarter] + 1
+        change = change - 25
+    elsif dime_value <= change
+        change_denominations[:dime] = change_denominations[:dime] + 1
+        change = change - 10
+    elsif nickel_value <= change
+        change_denominations[:nickel] = change_denominations[:nickel] + 1
+        change = change - 5
+    elsif penny_value <= change
+        change_denominations[:penny] = change_denominations[:penny] + 1
+        change = change - 1
+    end
+puts change_denominations
+
+end
+
 puts 'Have a great day!'
+
+
+
