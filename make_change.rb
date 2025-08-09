@@ -8,6 +8,7 @@ def get_price_of_items
         break if price.empty?
         puts 'Any other prices? --either imput or leave blank--'
     end
+
     sub_total
 end
 
@@ -49,7 +50,7 @@ def give_change(change)
 
     while change.to_i > 0
         if ten_dollar <= change
-            change_denominations[:ten_dollar] = change_denominations[:ten_dollar] + 1
+            change_denominations[:ten_dollar] += 1
             change = change - 1000
         elsif five_dollar <= change
             change_denominations[:five_dollar] = change_denominations[:five_dollar] + 1
@@ -68,9 +69,11 @@ def give_change(change)
             change = change - 5
         elsif penny_value <= change
             change_denominations[:penny] = change_denominations[:penny] + 1
-            change = change - 1
+                change = change - 1
         end
+
     end
+    
     puts change_denominations
 end
 
@@ -114,6 +117,7 @@ else # no payment
     puts 'uhhhhh you need to pay for those.'
     payment = get_payment
 end 
+
 puts 'Have a great day!'
 
 
