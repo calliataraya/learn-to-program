@@ -31,9 +31,27 @@ if metrics == 'standard'
 elsif metrics == 'metric'
   puts 'what is your weight in kilograms'
   weight = gets.chomp.to_f
-  
+
   puts 'what is your height in meters'
   height = gets.chomp.to_f
 end
 BMI = (weight / (height * height)).to_s
+
+# Output:
+
+# < 18.5 → Underweight
+# 18.5–24.9 → Normal
+# 25–29.9 → Overweight
+# 30+ → Obese
+
 puts 'your BMI is ' + BMI
+
+if BMI < 18.5.to_s
+  puts BMI + ' = underweight'
+elsif BMI > 18.5.to_s && BMI < 24.9.to_s
+  puts BMI + ' = normal'
+elsif BMI > 25.to_s && BMI < 29.9.to_s
+  puts BMI + ' = overweight'
+else
+  puts BMI + ' = obese'
+end
