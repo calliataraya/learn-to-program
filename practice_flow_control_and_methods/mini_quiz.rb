@@ -1,55 +1,54 @@
 # Ask 3 questions. For each, check if the answer is correct.
 # At the end, show how many were correct.
 
-puts "THIS IS A TEST!! yes or no answers only"
-
-puts "Is the Universe endless?"
-answer_one = gets.chomp.downcase.to_s
-
-puts "Do sound waves travel through space?"
-answer_two = gets.chomp.downcase.to_s
-
-puts "Have earth-based space crafts visited every planet in our solar system?"
-answer_third = gets.chomp.downcase.to_s
-
-if answer_one == "yes"
-  result_one = false
-elsif answer_one == "no"
-  result_one = true
-elsif answer_one == "yes"
-  result_two = false
-elsif answer_one == "no"
-  result_two = true
-elsif answer_one == "no"
-  result_three = false
-elsif answer_one == "yes"
-  result_three = true
-end
-
+linewidth = 75
 points = 0
 
-loop do
-  if result_one = true
-    points += 1
-    puts "correct"
-  else
-    puts "wrong"
-  end
-  if result_two = true
-    points += 1
-    puts "correct"
-  else
-    puts "wrong"
-  end
-  if result_three = true
-    points += 1
-    puts "correct"
-  else
-    puts "wrong"
-  end
-  if points = 3
-    break
-  end
+puts (("THIS IS A TEST!! yes or no answers only").center(linewidth))
+
+puts (("Is the Universe endless?").center(linewidth))
+answer_one = gets.chomp.downcase.to_s
+if answer_one == 'no'
+  result_one = 'correct'
+  points += 1
+else
+  result_one = 'incorrect'
 end
 
-puts "you recieved " + points.to_s + "/3"
+puts (("Do sound waves travel through space?").center(linewidth))
+answer_two = gets.chomp.downcase.to_s
+if answer_two == 'no'
+  result_two = 'correct'
+  points += 1
+else
+  result_two = 'incorrect'
+end
+
+puts (("Have earth-based space crafts visited every planet in our solar system?").center(linewidth))
+answer_three = gets.chomp.downcase.to_s
+if answer_three == 'yes'
+  result_three = 'correct'
+  points += 1
+else
+  result_three = 'incorrect'
+end
+puts ''
+
+puts (("you recieved " + points.to_s + "/3 points").center(linewidth))
+puts (('do you want to see the answer key? (yes or no)').center(linewidth))
+response = gets.chomp.downcase
+
+puts ''
+
+if response == "yes"
+  puts ((result_one).center(linewidth))
+  puts ((result_two).center(linewidth))
+  puts ((result_three).center(linewidth))
+  puts ((points.to_s + "/3").center(linewidth))
+else
+  puts ''
+  puts ''
+  puts ''
+  puts ''
+  puts (("ok").center(linewidth))
+end
