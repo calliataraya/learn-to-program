@@ -4,8 +4,8 @@ first_number = 0
 second_number = 0
 
 puts "give me two numbers (use numbers not words)"
-first_number = gets.chomp
-second_number = gets.chomp
+first_number = gets.chomp.to_f
+second_number = gets.chomp.to_f
 
 if first_number > second_number
   puts 'the first number is bigger than the second number'
