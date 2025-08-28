@@ -11,8 +11,6 @@ if temperature < 50
   puts 'cold'
 elsif temperature >= 50 && temperature <= 80
   puts 'warm'
-elsif temperature > 80
-  puts 'hot'
 else
-  puts '?'
+  puts 'hot'
 end
