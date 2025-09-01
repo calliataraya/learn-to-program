@@ -14,11 +14,11 @@ puts 'what is your last name?'
 last_name = gets.chomp
 
 if has_uppercase?(first_name) == 0 && has_uppercase?(last_name) == 0
-  puts 'so your name is ' + first_name.to_s + ' ' + last_name.to_s + '?'
+  puts "so your name is #{first_name.to_s} #{last_name.to_s}?"
 elsif has_uppercase?(first_name) != 0 && has_uppercase?(last_name) == 0
-  puts 'so your name is ' + first_name.to_s.capitalize! + ' ' + last_name.to_s + '?'
+  puts "so your name is #{first_name.to_s.capitalize!} #{last_name.to_s}?"
 elsif has_uppercase?(first_name) == 0 && has_uppercase?(last_name) != 0
-  puts 'so your name is ' + first_name.to_s + ' ' + last_name.to_s.capitalize! + '?'
+  puts "so your name is #{first_name.to_s} #{last_name.to_s.capitalize!}?"
 else
-  puts 'so your name is ' + first_name.to_s.capitalize! + ' ' + last_name.to_s.capitalize! + '?'
+  puts "so your name is #{first_name.to_s.capitalize!} #{last_name.to_s.capitalize!}?"
 end
