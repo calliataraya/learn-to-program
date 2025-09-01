@@ -11,9 +11,7 @@ if first_number > second_number
   puts 'the first number is bigger than the second number'
 elsif second_number > first_number
   puts 'the second number is bigger than the first number'
-elsif first_number == second_number
+else # first_number == second_number
   puts 'these numbers are the same'
-else
-  puts 'not sure'
 end
 
