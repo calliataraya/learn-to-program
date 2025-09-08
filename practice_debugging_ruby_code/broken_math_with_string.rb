@@ -8,11 +8,9 @@
 
 # puts "Your number plus 5 is #{result}"
 
-7. Broken math with string
-
 puts "Enter a number:"
 
-num = gets.chomp
+num = gets.chomp.to_i
 
 result = num + 5
 
