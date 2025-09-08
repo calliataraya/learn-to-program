@@ -4,6 +4,7 @@
 
 # color = gets.chomp
 
+
 # if color.length > 0
 #   puts "Nice!"
 # else
