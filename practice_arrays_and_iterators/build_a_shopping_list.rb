@@ -14,8 +14,12 @@ grocery_list = {}
   grocery_list[item] = price
 end
 
+puts ""
+puts "\nYour grocery list:"
 grocery_list.each do |item, price|
   puts "#{item} = #{price}"
 end
 
-total = grocery_list.sum ||
+total = grocery_list.values.sum
+
+puts "\nTotal = $#{total}"
