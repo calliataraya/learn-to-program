@@ -5,14 +5,29 @@
 # If yes → flash[:notice] = 'Logged in successfully'
 # If no → flash[:alert] = 'Login failed'
 
-class SessionsController < ApplicationController
+class SessionsController
+  def initialize
+    @flash = {}
+  end
+
   def create
-    if params[:login_success] == "yes"
-      flash[:notice] = "Logged in successfully"
+    print "Was your login successful? (yes/no): "
+    answer = gets.chomp.downcase
+
+    if answer == "yes"
+      @flash[:notice] = "Logged in successfully"
     else
-      flash[:alert] = "Login failed"
+      @flash[:alert] = "Login failed"
     end
 
-    redirect_to root_path
+    show_flash
+  end
+  
+  def show_flash
+    @flash.each do |key, message|
+      puts "#{key.capitalize}: #{message}"
+    end
   end
 end
+
+SessionsController.new.create
