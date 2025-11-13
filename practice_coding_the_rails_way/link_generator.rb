@@ -4,3 +4,10 @@
 # Output a fake link:
 
 # <a href='/about'>About</a>
+
+print "Page Name: "
+page = gets.chomp
+
+text = page.capitalize
+
+puts "<a href='/abo#{page}'>#{text}</a>"
