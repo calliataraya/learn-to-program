@@ -4,9 +4,9 @@
 # Sort them alphabetically by title and print them.
 
 
-first_book = {:title => "To Kill a Mockingbird", :author => "Harper Lee"}
-second_book = {:title => "1984", :author => "George Orwell"}
-third_book = {:title => "The Great Gatsby", :author => "F. Scott Fitzgerald"}
+first_book = {title: "To Kill a Mockingbird", author: "Harper Lee"}
+second_book = {title: "1984", author: "George Orwell"}
+third_book = {title: "The Great Gatsby", author: "F. Scott Fitzgerald"}
 
 books = [first_book, second_book, third_book]
 sorted_books = books.sort_by { |book| book[:title] }
