@@ -12,11 +12,11 @@ user_info = []
   print "What is your email?: "
   email = gets.chomp
 
-  user_info << {"name" => name, "email" => email}
+  user_info << {:name => name, :email => email}
   print "input saved\n\n"
 end
 
 user_info.each do |user|
-  print "Name: #{user["name"]}\n"
-  print "Email: #{user["email"]}\n\n"
+  print "Name: #{user[:name]}\n"
+  print "Email: #{user[:email]}\n\n"
 end
