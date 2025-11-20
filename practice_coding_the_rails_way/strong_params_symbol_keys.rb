@@ -9,13 +9,18 @@
 
 # I'm changing a previous problem to adhere to the strong params symbol keys solution
 
+def display(book)
+   puts "#{book[:title]} by #{book[:author]}"
+end
 
-first_book = {:title => "To Kill a Mockingbird", :author => "Harper Lee"}
-second_book = {:title => "1984", :author => "George Orwell"}
-third_book = {:title => "The Great Gatsby", :author => "F. Scott Fitzgerald"}
+books = [
+  { title: "To Kill a Mockingbird", author: "Harper Lee" },
+  { title: "1984", author: "George Orwell" },
+  { title: "The Great Gatsby", author: "F. Scott Fitzgerald" }
+]
 
 books = [first_book, second_book, third_book]
 
-books.each do |book|
-  print "📚 #{book[:title]} by #{book[:author]}\n"
-end
+sorted_books = books.sort_by { |book| book[:title] }
+print "\nHere are these books sorted alphabetically by Title: \n"
+sorted_books.each { |book| display(book) }
