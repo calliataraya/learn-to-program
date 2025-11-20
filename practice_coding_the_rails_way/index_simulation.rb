@@ -4,11 +4,11 @@
 # Loop through and print:
 # 📚 [Title] by [Author]
 
-first_book = {"title" => "To Kill a Mockingbird", "author" => "Harper Lee"}
-second_book = {"title" => "1984", "author" => "George Orwell"}
-third_book = {"title" => "The Great Gatsby", "author" => "F. Scott Fitzgerald"}
-
-books = [first_book, second_book, third_book]
+books = [
+  { title: "To Kill a Mockingbird", author: "Harper Lee" },
+  { title: "1984", author: "George Orwell" },
+  { title: "The Great Gatsby", author: "F. Scott Fitzgerald" }
+]
 
 books.each do |book|
   print "📚 #{book["title"]} by #{book["author"]}\n"
