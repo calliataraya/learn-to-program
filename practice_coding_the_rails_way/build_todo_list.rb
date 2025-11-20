@@ -6,6 +6,21 @@
 # [{ "task" => "Buy milk", "done" => false }, ...]
 # Print each with ✅ or ❌ depending on done.
 
+def ask_done_status
+  valid_yes = ["yes", "y"]
+  valid_no  = ["no", "n"]
+
+  loop do
+    print "Is it done? (yes/no): "
+    done_input = gets.chomp.downcase.strip
+
+    return true  if valid_yes.include?(done_input)
+    return false if valid_no.include?(done_input)
+
+    puts "Please enter yes, y, no, or n."
+  end
+end
+
 todo_list = []
 
 print "Give me three tasks.\n"
@@ -13,10 +28,7 @@ print "Give me three tasks.\n"
   print "Task #{1 + i}: "
   task = gets.chomp
 
-  print "Is it done? (yes or no): "
-  done_input = gets.chomp.downcase
-
-  done_status = done_input == "yes"
+  done_status = ask_done_status
 
   todo_list << {task: task, done: done_status}
 end
