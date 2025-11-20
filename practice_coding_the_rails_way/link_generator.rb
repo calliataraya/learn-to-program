@@ -10,4 +10,4 @@ page = gets.chomp
 
 text = page.capitalize
 
-puts "<a href='/abo#{page}'>#{text}</a>"
+puts "<a href='/#{page}'>#{text}</a>"
