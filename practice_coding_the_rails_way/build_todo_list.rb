@@ -18,11 +18,11 @@ print "Give me three tasks.\n"
 
   done_status = done_input == "yes"
 
-  todo_list << {"task" => task, "done" => done_status}
+  todo_list << {task: task, done: done_status}
 end
 
 print "\nYour To-Do List:"
 todo_list.each do |item|
-  status_symbol = item["done"] ? "✅" : "❌"
-  print "\n#{status_symbol} #{item["task"]}"
+  status_symbol = item[:done] ? "✅" : "❌"
+  print "\n#{status_symbol} #{item[:task]}"
 end
