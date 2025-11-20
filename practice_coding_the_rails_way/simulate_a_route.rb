@@ -7,10 +7,10 @@
 print "Give me a route like 'users/5': "
 route = gets.chomp
 
-parts = route.split("/")
-
-resource = parts[0]
-id = parts[1]
+resource, id = route.split("/")
+# parts = route.split("/")
+# resource = parts[0]
+# id = parts[1]
 
 singular = resource.end_with?("s") ? resource[0..-2] : resource
 puts "You are viewing #{singular} with ID #{id}"
